@@ -157,23 +157,6 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -240,48 +223,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Transformer-based architectures have become the backbone of both uni-modal and multi-modal foundation models, largely due to their scalability via attention mechanisms, resulting in a rich ecosystem of publicly available pre-trained models such as LLaVA, CLIP, and DeiT, etc. In parallel, emerging sub-quadratic architectures like Mamba offer promising efficiency gains by enabling global context modeling with linear complexity. However, training these architectures from scratch remains resource-intensive (e.g., in terms of data and time).
+Motivated by this challenge, we explore a cross-architecture knowledge transfer paradigm, termed TransMamba, that facilitates the reuse of Transformer pre-trained knowledge. We propose a two-stage framework to accelerate the training of Mamba-based models, ensuring their effectiveness across both uni-modal and multi-modal tasks. The first stage leverages pre-trained Transformer models to initialize critical components of the Mamba architecture. To bridge architectural and dimensional gaps, we develop a selective weight subcloning strategy and a layered initialization scheme that prioritizes the early n layers.
+Building on this initialization, the second stage introduces an adaptive multi-directional knowledge distillation method. This mechanism employs layer-wise adaptive scaling factors to align Mamba representations with their Transformer counterparts, while accommodating the scanning order variations inherent to multi-modal Mamba architectures.
+Despite operating with a reduced training dataset and a more compact model architecture, TransMamba consistently outperforms baseline approaches across diverse mamba-based backbones (e.g., PlainMamba, Vmamba, ViM and VideoMamba) and downstream tasks (e.g., image classification, visual question answering, text-video retrieval and multimodal reasoning). 
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
